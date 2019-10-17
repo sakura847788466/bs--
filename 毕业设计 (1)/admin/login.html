@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>学生宿舍管理系统</title>
+    <link rel="stylesheet" href="./static/css/bootstrap.css">
+    <link href="./static/h-ui/css/H-ui.min.css" rel="stylesheet" type="text/css" />
+    <link href="./static/h-ui.admin/css/H-ui.login.css" rel="stylesheet" type="text/css" />
+    <link href="./static/h-ui.admin/css/style.css" rel="stylesheet" type="text/css" />
+    <link href="./static/fonts/Hui-iconfont/1.0.8/iconfont.css" rel="stylesheet" type="text/css" />
+
+    <script src="./static/js/jquery-3.3.1.js"></script>
+    <script src="./static/js/bootstrap.js"></script>
+</head>
+
+<body>
+    <div style="display:flex;align-items: center;">
+        <img src="./static/img/log.png">
+        <h1 style="margin-left:200px;">学&nbsp生&nbsp宿&nbsp舍&nbsp后&nbsp台&nbsp管&nbsp理系&nbsp统</h1>
+    </div>
+
+    <link rel="stylesheet" href="./static/css/login.css">
+
+
+    <ul class="nav nav-tabs" style="background:#942F32">
+        <li class="tab_item" style="margin-left:100px;"><a onmouseover="this.style.background='white';this.style.color='orange';" onmouseleave="if(this.parentNode.className == 'tab_item'){this.style.background='orange';this.style.color='white';}" href="javascript:;" onclick="active(0)">学生登录</a></li>
+        <li class="tab_item"><a onmouseover="this.style.background='white';this.style.color='orange';" onmouseleave="if(this.parentNode.className == 'tab_item'){this.style.background='orange';this.style.color='white';}" href="javascript:;" style="color:white" onclick="active(1)">宿舍管理员登录</a></li>
+        <li class="tab_item"><a onmouseover="this.style.background='white';this.style.color='orange';" onmouseleave="if(this.parentNode.className == 'tab_item'){this.style.background='orange';this.style.color='white';}" href="javascript:;" style="color:white" onclick="active(2)">系统管理员登录</a></li>
+    </ul>
+
+    <div class="login">
+
+        <h2> </h2>
+        <div class="login-top">
+            <h1 style="color:#942F32">用户登录</h1>
+            <form id="form" >
+                <input type="text" id="user_id" value="" name="user_id" placeholder="学号" class="userName" onchange="id_check()" >
+                <p id="id_error" style="color:red;"></p>
+                <input type="password" id="password" value="" name="password" class="password" placeholder="登录密码" onchange="password_check()" onblur="check_username()">
+                <p id="password_error" style="color:red"></p>
+
+                <div class="forgot">
+                    <input type="submit" style="background:orange" value="登录" onclick="check_username()">
+
+                </div>
+
+            </form>
+        </div>
+        <div class="login-bottom">
+        </div>
+    </div>
+
+    <script src="./static/js/login.js"></script>
+
+</body>
+<script type="text/javascript">
+    function  login(){
+         let storage =window.localStorage;
+         // alert(storage.getItem('updateId'));
+         storage.setItem('username',$(".userName").val());
+         //本地存储用户名
+      let url ='http://127.0.0.1:3000/goods/Mlogin'
+        let data ={
+                ps:$(".password").val(),
+                num:$(".userName").val()
+        }
+
+        $.post(url,data,function(res){
+            console.log(res)
+             if(res !==''){
+              alert("登录成功");
+              location.href='http://127.0.0.1:3000/index.html'
+             }else{
+              alert("用户名有错");
+             }
+            
+        })
+     }
+
+
+     //用户名检查是否重复
+     function check_username(){
+        let url ='http://127.0.0.1:3000/goods/isUsername'
+        let data ={
+                num:$(".userName").val(),
+        }
+
+        $.post(url,data,function(res){
+             // let ps = res.data.ps;
+             let pss =$('.password').val();
+             // console.log(ps)
+             console.log(pss)
+             if(res.err==1){
+                   alert("登录成功");
+                    let storage =window.localStorage;
+                    // alert(storage.getItem('updateId'));
+                    storage.setItem('username',$(".userName").val());
+                   location.href='http://127.0.0.1:3000/index.html'
+                  if(res.data.ps !==pss){
+                       alert("输入的密码错误")
+                 }
+                 else{
+                  // login();        
+                    } 
+            
+             }
+             else{
+                login();
+             }
+        
+             
+        })
+     }
+
+</script>
+
+</html>

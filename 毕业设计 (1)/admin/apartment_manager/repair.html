@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>学生宿舍管理系统</title>
+    <link rel="stylesheet" href="../static/css/bootstrap.css">
+    <script src="../static/js/jquery-3.3.1.js"></script>
+    <script src="../static/js/bootstrap.js"></script>
+</head>
+
+<body>
+    <div style="display:flex;align-items: center;">
+        <img src="../static/img/log.png">
+        <h1 style="margin-left:200px;">学&nbsp生&nbsp宿&nbsp舍&nbsp后&nbsp台&nbsp管&nbsp理系&nbsp统</h1>
+    </div>
+
+    <ul class="nav nav-tabs" style="background:orange">
+        <li class="tab_item" style="margin-left:100px;"><a onmouseover="this.style.background='white';this.style.color='orange';" onmouseleave="if(this.parentNode.className == 'tab_item'){this.style.background='orange';this.style.color='white';}" href="index.html" style="color:white">首页</a></li>
+        <li class="tab_item"><a onmouseover="this.style.background='white';this.style.color='orange';" onmouseleave="if(this.parentNode.className == 'tab_item'){this.style.background='orange';this.style.color='white';}" href="room.html" style="color:white">学生宿舍管理</a></li>
+        <li class="tab_item"><a onmouseover="this.style.background='white';this.style.color='orange';" onmouseleave="if(this.parentNode.className == 'tab_item'){this.style.background='orange';this.style.color='white';}" href="http://127.0.0.1:3000/apartment_manager/student.html" style="color:white">学生信息管理</a></li>
+        <li class="tab_item active"><a style="background:white;color:orange;" onmouseover="this.style.background='white';this.style.color='orange';" onmouseleave="if(this.parentNode.className == 'tab_item'){this.style.background='orange';this.style.color='white';}" href="http://127.0.0.1:3000/apartment_manager/repair.html"
+                style="color:white">宿舍报修信息管理</a></li>
+        <li class="tab_item"><a onmouseover="this.style.background='white';this.style.color='orange';" onmouseleave="if(this.parentNode.className == 'tab_item'){this.style.background='orange';this.style.color='white';}" href="cost.html" style="color:white">水电费管理</a></li>
+        <li class="tab_item"><a onmouseover="this.style.background='white';this.style.color='orange';" onmouseleave="if(this.parentNode.className == 'tab_item'){this.style.background='orange';this.style.color='white';}" href="entry_exit.html" style="color:white">物品出入管理</a></li>
+        <li class="tab_item"><a onmouseover="this.style.background='white';this.style.color='orange';" onmouseleave="if(this.parentNode.className == 'tab_item'){this.style.background='orange';this.style.color='white';}" href="modify_password.html" style="color:white">修改密码</a></li>
+        <div role="presentation" style="float:right;margin:10px 100px 10px 0"><a style="color:white" href="http://127.0.0.1:3000/login.html">注销</a></div>
+        <div role="presentation" style="float:right;margin:10px 20px 10px 0"><a style="color:white" href="javascript:;">欢迎您：<span class="username"></span></a>
+        </div>
+    </ul>
+
+    <div style="margin:auto;width:1000px;height:100%">
+
+        <div style="margin-top:30px">
+            <table class="table table-striped" style="table-layout:fixed;margin:auto;margin-bottom:100px;">
+                <tbody>
+                    <tr class="" style="background:orange;color:white;">
+                        <th class="" colspan="7">所有学生报修信息
+                        </th>
+                        <th style="text-align:center;" colspan="2"><a href="/apartment/repair/2/" style="color:white;"></a></th>
+                    </tr>
+                    <tr class="" style="text-align:center">
+                        <td class="active">寝室</td>
+                        <td class="active">报修类型</td>
+                        <td class="active">报修设备</td>
+                        <td class="active">联系方式</td>
+                        <td class="active">报修时间</td>
+                        <td class="active">维修状态</td>
+                        <td class="active" colspan="2">备注信息</td>
+                        <td class="active">反馈 / 处理</td>
+                    </tr>
+
+
+<!-- 
+                    <tr class="" style="text-align:center">
+                        <td class="active">D2624</td>
+                        <td class="active">电器类</td>
+                        <td class="active">直饮水机</td>
+                        <td class="active">111111111</td>
+                        <td class="active">2019年1月6日 15:40</td>
+                        <td class="active">已处理</td>
+                        <td class="active" colspan="2">尽快来</td>
+                        <td class="active">
+
+
+                            <p>等待确认验收</p>
+
+                        </td>
+                    </tr> -->
+                    <!--<button type="button" style="background:orange;border:0" class="btn btn-primary" onclick="window.location.href='/apartment/repair/finish/24/">我已处理</button>-->
+                </tbody>
+            </table>
+        </div>
+
+    </div>
+</body>
+<script type="text/javascript">
+   getRepair()
+     function getRepair() {
+         let storage =window.localStorage;
+                let getusername = storage.getItem('username');
+                $(".username").html(getusername)
+        let url = "http://127.0.0.1:3000/goods/repair"
+        let data = {
+        }
+       
+        $.post(url, data, function(res) {
+            console.log(res)
+             for (var item of res.data) {
+           var str = `   <tr class="" style="text-align:center">
+                        <td class="active">${item.num}</td>
+                        <td class="active">${item.type}</td>
+                        <td class="active">${item.thing}</td>
+                        <td class="active">${item.phone}</td>
+                        <td class="active">${item.time} 15:40</td>
+                        <td class="active">${item.stutas}</td>
+                        <td class="active" colspan="2">${item.beizhu}</td>
+                        <td class="active">
+                            <p>${item.jianyi}</p>
+
+                        </td>
+                    </tr>`;
+            $('tbody').append(str);
+        }
+            
+            
+        })
+    }
+
+
+
+</script>
+   
+
+</html>

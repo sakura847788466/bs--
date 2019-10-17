@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>学生宿舍管理系统</title>
+    <link rel="stylesheet" href="../static/css/bootstrap.css">
+    <script src="../static/js/jquery-3.3.1.js"></script>
+    <script src="../static/js/bootstrap.js"></script>
+</head>
+<body>
+<div>
+    <img src="../static/img/bar.jpg">
+</div>
+
+<ul class="nav nav-tabs" style="background:orange">
+    <li class="tab_item" style="margin-left:100px;"><a onmouseover="this.style.background='white';this.style.color='orange';"
+                                                       onmouseleave="if(this.parentNode.className == 'tab_item'){this.style.background='orange';this.style.color='white';}"
+                                                       href="index.html" style="color:white">首页</a></li>
+    <li class="tab_item"><a  onmouseover="this.style.background='white';this.style.color='orange';"
+                             onmouseleave="if(this.parentNode.className == 'tab_item'){this.style.background='orange';this.style.color='white';}"
+                             href="building.html" style="color:white">宿舍楼信息管理</a></li>
+    <li class="tab_item active"><a style="background:white;color:orange; " onmouseover="this.style.background='white';this.style.color='orange';"
+                            onmouseleave="if(this.parentNode.className == 'tab_item'){this.style.background='orange';this.style.color='white';}"
+                            href="student.html" style="color:white">学生信息管理</a></li>
+    <li class="tab_item"><a onmouseover="this.style.background='white';this.style.color='orange';"
+                                   onmouseleave="if(this.parentNode.className == 'tab_item'){this.style.background='orange';this.style.color='white';}"
+                                   href="manager.html" style="color:white">宿管信息管理</a></li>
+    <li class="tab_item"><a onmouseover="this.style.background='white';this.style.color='orange';"
+                            onmouseleave="if(this.parentNode.className == 'tab_item'){this.style.background='orange';this.style.color='white';}"
+                            href="modify_password.html" style="color:white">密码修改</a></li>
+    <div role="presentation" style="float:right;margin:10px 100px 10px 0"><a style="color:white"
+                                                                             href="../user/login.html">注销</a></div>
+    <div role="presentation" style="float:right;margin:10px 20px 10px 0"><a style="color:white" href="javascript:;">欢迎您：系统管理员01</a>
+    </div>
+</ul>
+
+
+<div style="margin:auto;width:1000px;height:100%">
+
+<script src="../static/js/student.js"></script>
+
+    <div style="margin-top:30px">
+        <table class="table table-striped" style="table-layout:fixed;margin:auto;">
+            <tbody><tr class="" style="background:orange;color:white;">
+                <th class="" colspan="7"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">所有
+                </font></font><div class="btn-group">
+                    <button type="button" style="border:1px" class="btn btn-warning dropdown-toggle btn-xs" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+                        A1</font></font><span class="caret"></span>
+                    </button><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+                    &nbsp;栋
+                </font></font><ul class="dropdown-menu" style="background:#FFFFE0">
+
+                    <li><a href="/info/student/D2/0/0/"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">D2栋</font></font></a></li>
+
+                    <li><a href="/info/student/A1/0/0/"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">A1栋</font></font></a></li>
+
+                    <li><a href="/info/student/A2/0/0/"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">A2栋</font></font></a></li>
+
+                    <li><a href="/info/student/B1/0/0/"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">B1栋</font></font></a></li>
+
+                    <li><a href="/info/student/B2/0/0/"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">B2栋</font></font></a></li>
+
+                    <li><a href="/info/student/C1/0/0/"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">C1栋</font></font></a></li>
+
+                    <li><a href="/info/student/C2/0/0/"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">C2栋</font></font></a></li>
+
+                    <li><a href="/info/student/D1/0/0/"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">D1栋</font></font></a></li>
+
+                    <li><a href="/info/student/D3/0/0/"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">D3栋</font></font></a></li>
+
+                </ul>
+                </div>
+                    <div class="btn-group">
+                        <button type="button" style="border:1px" class="btn btn-warning dropdown-toggle btn-xs" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <span class="caret"></span>
+                        </button><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+                        &nbsp;层
+                    </font></font><ul class="dropdown-menu" style="background:#FFFFE0">
+                        <li><a href="/info/student/A1/0/0/"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">所有楼层</font></font></a></li>
+
+                        <li><a href="/info/student/A1/1/0/"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">1层</font></font></a></li>
+
+                        <li><a href="/info/student/A1/2/0/"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">2层</font></font></a></li>
+
+                        <li><a href="/info/student/A1/3/0/"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">3层</font></font></a></li>
+
+                        <li><a href="/info/student/A1/4/0/"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">4层</font></font></a></li>
+
+                        <li><a href="/info/student/A1/5/0/"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">5层</font></font></a></li>
+
+                        <li><a href="/info/student/A1/6/0/"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">6层</font></font></a></li>
+
+                        <li><a href="/info/student/A1/7/0/"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">7层</font></font></a></li>
+
+                    </ul>
+                    </div>
+                    <div class="btn-group">
+                        <button type="button" style="border:1px" class="btn btn-warning dropdown-toggle btn-xs" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <span class="caret"></span>
+                        </button><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+                        &nbsp;的学生
+                    </font></font><ul class="dropdown-menu" style="background:#FFFFE0;overflow:scroll;height:400px;">
+                        <li><a href="/info/student/A1/0/0/"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">所有寝室</font></font></a></li>
+
+                        <li><a href="/info/student/A1/0/1/"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">1寝室</font></font></a></li>
+
+                        <li><a href="/info/student/A1/0/2/"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">2寝室</font></font></a></li>
+
+                        <li><a href="/info/student/A1/0/3/"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">3寝室</font></font></a></li>
+
+                        <li><a href="/info/student/A1/0/4/"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">4寝室</font></font></a></li>
+
+                        <li><a href="/info/student/A1/0/5/"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">5寝室</font></font></a></li>
+
+                        <li><a href="/info/student/A1/0/6/"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">6寝室</font></font></a></li>
+
+                        <li><a href="/info/student/A1/0/7/"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">7寝室</font></font></a></li>
+
+                        <li><a href="/info/student/A1/0/8/"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">8寝室</font></font></a></li>
+
+                        <li><a href="/info/student/A1/0/9/"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">9寝室</font></font></a></li>
+
+                        <li><a href="/info/student/A1/0/10/"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">10寝室</font></font></a></li>
+
+                        <li><a href="/info/student/A1/0/11/"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">11寝室</font></font></a></li>
+
+                        <li><a href="/info/student/A1/0/12/"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">12寝室</font></font></a></li>
+
+                        <li><a href="/info/student/A1/0/13/"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">13寝室</font></font></a></li>
+
+                        <li><a href="/info/student/A1/0/14/"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">14寝室</font></font></a></li>
+
+                        <li><a href="/info/student/A1/0/15/"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">15寝室</font></font></a></li>
+
+                        <li><a href="/info/student/A1/0/16/"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">16寝室</font></font></a></li>
+
+                        <li><a href="/info/student/A1/0/17/"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">17寝室</font></font></a></li>
+
+                        <li><a href="/info/student/A1/0/18/"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">18寝室</font></font></a></li>
+
+                        <li><a href="/info/student/A1/0/19/"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">19寝室</font></font></a></li>
+
+                        <li><a href="/info/student/A1/0/20/"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">20寝室</font></font></a></li>
+
+                        <li><a href="/info/student/A1/0/21/"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">21寝室</font></font></a></li>
+
+                        <li><a href="/info/student/A1/0/22/"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">22寝室</font></font></a></li>
+
+                        <li><a href="/info/student/A1/0/23/"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">23寝室</font></font></a></li>
+
+                        <li><a href="/info/student/A1/0/24/"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">24寝室</font></font></a></li>
+
+                        <li><a href="/info/student/A1/0/25/"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">25寝室</font></font></a></li>
+
+                        <li><a href="/info/student/A1/0/26/"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">26寝室</font></font></a></li>
+
+                        <li><a href="/info/student/A1/0/27/"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">27寝室</font></font></a></li>
+
+                        <li><a href="/info/student/A1/0/28/"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">28寝室</font></font></a></li>
+
+                        <li><a href="/info/student/A1/0/29/"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">29寝室</font></font></a></li>
+
+                        <li><a href="/info/student/A1/0/30/"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">30寝室</font></font></a></li>
+
+                    </ul>
+                    </div>
+                </th>
+                <th class="" style="text-align:center"><a href="javascript:;" style="color:white;" id="add_text" onclick="add()"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">添加</font></font></a></th>
+            </tr>
+            <tr class="" style="text-align:center">
+                <td class="active"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">学号</font></font></td>
+                <td class="active"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">寝室</font></font></td>
+                <td class="active"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">姓名</font></font></td>
+                <td class="active"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">性别</font></font></td>
+                <td class="active"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">班级</font></font></td>
+                <td class="active"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">入住日期</font></font></td>
+                <td class="active"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">在住状态</font></font></td>
+                <td class="active"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">...</font></font></td>
+            </tr>
+
+            <tr id="add" style="text-align:center;display:none;">
+                <form action="/info/student/add/" method="post" onsubmit="return check_error()"></form>
+                <input type="hidden" name="csrfmiddlewaretoken" value="UdAW9p1V59pVeAadnqSZG7EgKiMEb0lQSzFg9KzAlhcgjN4ligWUP81sT5cUbHXS">
+                <td class="active"><input type="number" id="student_id" name="student_id" required="" class="form-control" style="border:none;" onchange="find_student()"><p id="student_error" style="color:red;"></p></td>
+                <td class="active"><input type="text" id="room" required="" name="room" value="" class="form-control" style="border:none;" onchange="find_room()"><p id="room_error" style="color:red;"></p></td>
+                <td class="active"><p id="student_name"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">- </font></font></p></td>
+                <td class="active"><p id="student_sex"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">- </font></font></p></td>
+                <td class="active"><p id="student_class"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">- </font></font></p></td>
+                <td class="active">
+                    <input type="date" id="date" class="form-control" name="date" required="" style="border:0">
+                </td>
+                <td class="active">
+                    <div class="form-group">
+                        <div class="btn-group">
+                            <button style="border:0" type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <span id="is"></span><span style="color:orange" class="caret"></span>
+                                <input type="text" id="status" required="" name="status" value="是" style="display:none">
+                            </button>
+                            <ul class="dropdown-menu">
+                                <li><a href="javascript:;" onclick="document.getElementById('is').innerHTML=this.innerHTML;document.getElementById('status').value=this.innerHTML;"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">是</font></font></a></li>
+                                <li><a href="javascript:;" onclick="document.getElementById('is').innerHTML=this.innerHTML;document.getElementById('status').value=this.innerHTML;"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">否</font></font></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </td>
+                <td class="active"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"><input style="background:orange;border:0" type="submit" required="" class="btn btn-primary" value="保存"></font></font></td>
+
+            </tr>
+
+
+
+            <tr class="" style="text-align:center">
+                <td class="active"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">2018120656</font></font></td>
+                <td class="active"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">A1101</font></font></td>
+                <td class="active"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">王大锤</font></font></td>
+                <td class="active"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">男</font></font></td>
+                <td class="active"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">18计算机网络技术1班</font></font></td>
+                <td class="active"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">2018年12月26日15:43</font></font></td>
+                <td class="active"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">是</font></font></td>
+                <td class="active"><a href="modify_student.html" style="color:black;"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">修改</font></font></a></td>
+            </tr>
+
+            <tr class="" style="text-align:center">
+                <td class="active"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">2018120655</font></font></td>
+                <td class="active"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">A1101</font></font></td>
+                <td class="active"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">张小明</font></font></td>
+                <td class="active"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">男</font></font></td>
+                <td class="active"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">18计算机网络技术1班</font></font></td>
+                <td class="active"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">2018年12月26日15:43</font></font></td>
+                <td class="active"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">是</font></font></td>
+                <td class="active"><a href="modify_student.html" style="color:black;"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">修改</font></font></a></td>
+            </tr>
+
+            <tr class="" style="text-align:center">
+                <td class="active"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">2018120651</font></font></td>
+                <td class="active"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">A1102</font></font></td>
+                <td class="active"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">李铁柱</font></font></td>
+                <td class="active"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">男</font></font></td>
+                <td class="active"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">18计算机网络技术1班</font></font></td>
+                <td class="active"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">2018年12月26日15:43</font></font></td>
+                <td class="active"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">是</font></font></td>
+                <td class="active"><a href="modify_student.html" style="color:black;"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">修改</font></font></a></td>
+            </tr>
+
+            <tr class="" style="text-align:center">
+                <td class="active"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">2018120623</font></font></td>
+                <td class="active"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">A1102</font></font></td>
+                <td class="active"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">江小白</font></font></td>
+                <td class="active"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">男</font></font></td>
+                <td class="active"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">18计算机网络技术2班</font></font></td>
+                <td class="active"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">2018年12月26日15:44</font></font></td>
+                <td class="active"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">是</font></font></td>
+                <td class="active"><a href="modify_student.html" style="color:black;"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">修改</font></font></a></td>
+            </tr>
+
+
+            </tbody></table>
+    </div>
+
+
+</div>
+
+</body>
+</html>

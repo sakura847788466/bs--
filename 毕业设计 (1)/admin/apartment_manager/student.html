@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>学生宿舍管理系统</title>
+    <link rel="stylesheet" href="../static/css/bootstrap.css">
+    <script src="../static/js/jquery-3.3.1.js"></script>
+    <script src="../static/js/bootstrap.js"></script>
+</head>
+
+<body>
+    <div style="display:flex;align-items: center;">
+        <img src="../static/img/log.png">
+        <h1 style="margin-left:200px;">学&nbsp生&nbsp宿&nbsp舍&nbsp后&nbsp台&nbsp管&nbsp理系&nbsp统</h1>
+    </div>
+
+    <ul class="nav nav-tabs" style="background:orange">
+        <li class="tab_item" style="margin-left:100px;"><a onmouseover="this.style.background='white';this.style.color='orange';" onmouseleave="if(this.parentNode.className == 'tab_item'){this.style.background='orange';this.style.color='white';}" href="index.html" style="color:white">首页</a></li>
+        <li class="tab_item"><a onmouseover="this.style.background='white';this.style.color='orange';" onmouseleave="if(this.parentNode.className == 'tab_item'){this.style.background='orange';this.style.color='white';}" href="http://localhost:3000/room.html" style="color:white">学生宿舍管理</a></li>
+        <li class="tab_item active"><a style="background:white;color:orange;" onmouseover="this.style.background='white';this.style.color='orange';" onmouseleave="if(this.parentNode.className == 'tab_item'){this.style.background='orange';this.style.color='white';}" href="student.html"
+                style="color:white">学生信息管理</a></li>
+        <li class="tab_item"><a onmouseover="this.style.background='white';this.style.color='orange';" onmouseleave="if(this.parentNode.className == 'tab_item'){this.style.background='orange';this.style.color='white';}" href="repair.html" style="color:white">宿舍报修信息管理</a></li>
+        <li class="tab_item"><a onmouseover="this.style.background='white';this.style.color='orange';" onmouseleave="if(this.parentNode.className == 'tab_item'){this.style.background='orange';this.style.color='white';}" href="cost.html" style="color:white">水电费管理</a></li>
+        <li class="tab_item"><a onmouseover="this.style.background='white';this.style.color='orange';" onmouseleave="if(this.parentNode.className == 'tab_item'){this.style.background='orange';this.style.color='white';}" href="entry_exit.html" style="color:white">物品出入管理</a></li>
+        <li class="tab_item"><a onmouseover="this.style.background='white';this.style.color='orange';" onmouseleave="if(this.parentNode.className == 'tab_item'){this.style.background='orange';this.style.color='white';}" href="modify_password.html" style="color:white">修改密码</a></li>
+        <div role="presentation" style="float:right;margin:10px 100px 10px 0"><a style="color:white" href="http://127.0.0.1:3000/login.html">注销</a></div>
+        <div role="presentation" style="float:right;margin:10px 20px 10px 0"><a style="color:white" href="javascript:;">欢迎您：<span class="username"></span></a>
+        </div>
+    </ul>
+
+    <div style="margin:auto;width:1000px;height:100%">
+
+        <script src="../static/js/student.js"></script>
+
+        <div style="margin-top:30px">
+            <table class="table table-striped" style="table-layout:fixed;margin:auto;margin-bottom:100px;">
+                <tbody>
+                    <tr class="" style="background:orange;color:white;">
+                        <th class="" colspan="5">
+                            <font style="vertical-align: inherit;">
+                                <font style="vertical-align: inherit;">D2栋&nbsp;
+                                </font>
+                            </font>
+                            <div class="btn-group">
+                                <button type="button" style="border:1px" class="btn btn-warning dropdown-toggle btn-xs" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+                        所有楼层</font></font><span class="caret"></span>
+                    </button>
+
+                                <ul class="dropdown-menu" style="background:#FFFFE0">
+                                    <li>
+                                        <a href="/apartment/student/0/0/search">
+                                            <font style="vertical-align: inherit;">
+                                                <font style="vertical-align: inherit;">所有楼层</font>
+                                            </font>
+                                        </a>
+                                    </li>
+
+                                    <li>
+                                        <a href="/apartment/student/1/0/search">
+                                            <font style="vertical-align: inherit;">
+                                                <font style="vertical-align: inherit;">1楼</font>
+                                            </font>
+                                        </a>
+                                    </li>
+
+                                    <li>
+                                        <a href="/apartment/student/2/0/search">
+                                            <font style="vertical-align: inherit;">
+                                                <font style="vertical-align: inherit;">2楼</font>
+                                            </font>
+                                        </a>
+                                    </li>
+
+                                    <li>
+                                        <a href="/apartment/student/3/0/search">
+                                            <font style="vertical-align: inherit;">
+                                                <font style="vertical-align: inherit;">3楼</font>
+                                            </font>
+                                        </a>
+                                    </li>
+
+                                    <li>
+                                        <a href="/apartment/student/4/0/search">
+                                            <font style="vertical-align: inherit;">
+                                                <font style="vertical-align: inherit;">4楼</font>
+                                            </font>
+                                        </a>
+                                    </li>
+
+                                    <li>
+                                        <a href="/apartment/student/5/0/search">
+                                            <font style="vertical-align: inherit;">
+                                                <font style="vertical-align: inherit;">5楼</font>
+                                            </font>
+                                        </a>
+                                    </li>
+
+                                    <li>
+                                        <a href="/apartment/student/6/0/search">
+                                            <font style="vertical-align: inherit;">
+                                                <font style="vertical-align: inherit;">6楼</font>
+                                            </font>
+                                        </a>
+                                    </li>
+
+                                    <li>
+                                        <a href="/apartment/student/7/0/search">
+                                            <font style="vertical-align: inherit;">
+                                                <font style="vertical-align: inherit;">7楼</font>
+                                            </font>
+                                        </a>
+                                    </li>
+
+                                </ul>
+                            </div>
+
+                            <div class="btn-group">
+                                <button type="button" style="border:1px" class="btn btn-warning dropdown-toggle btn-xs" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+                            所有寝室</font></font><span class="caret"></span>
+                        </button>
+                                <ul class="dropdown-menu" style="background:#FFFFE0;overflow:scroll;height:400px;">
+                                    <li>
+                                        <a href="/apartment/student/0/0/search">
+                                            <font style="vertical-align: inherit;">
+                                                <font style="vertical-align: inherit;">所有寝室</font>
+                                            </font>
+                                        </a>
+                                    </li>
+
+                                    <li>
+                                        <a href="/apartment/student/0/01/search">
+                                            <font style="vertical-align: inherit;">
+                                                <font style="vertical-align: inherit;">D2 * 01寝室</font>
+                                            </font>
+                                        </a>
+                                    </li>
+
+                                    <li>
+                                        <a href="/apartment/student/0/02/search">
+                                            <font style="vertical-align: inherit;">
+                                                <font style="vertical-align: inherit;">D2 * 02寝室</font>
+                                            </font>
+                                        </a>
+                                    </li>
+
+                                    <li>
+                                        <a href="/apartment/student/0/03/search">
+                                            <font style="vertical-align: inherit;">
+                                                <font style="vertical-align: inherit;">D2 * 03寝室</font>
+                                            </font>
+                                        </a>
+                                    </li>
+
+                                    <li>
+                                        <a href="/apartment/student/0/04/search">
+                                            <font style="vertical-align: inherit;">
+                                                <font style="vertical-align: inherit;">D2 * 04寝室</font>
+                                            </font>
+                                        </a>
+                                    </li>
+
+                                    <li>
+                                        <a href="/apartment/student/0/05/search">
+                                            <font style="vertical-align: inherit;">
+                                                <font style="vertical-align: inherit;">D2 * 05寝室</font>
+                                            </font>
+                                        </a>
+                                    </li>
+
+                                    <li>
+                                        <a href="/apartment/student/0/06/search">
+                                            <font style="vertical-align: inherit;">
+                                                <font style="vertical-align: inherit;">D2 * 06寝室</font>
+                                            </font>
+                                        </a>
+                                    </li>
+
+                                    <li>
+                                        <a href="/apartment/student/0/07/search">
+                                            <font style="vertical-align: inherit;">
+                                                <font style="vertical-align: inherit;">D2 * 07寝室</font>
+                                            </font>
+                                        </a>
+                                    </li>
+
+                                    <li>
+                                        <a href="/apartment/student/0/08/search">
+                                            <font style="vertical-align: inherit;">
+                                                <font style="vertical-align: inherit;">D2 * 08寝室</font>
+                                            </font>
+                                        </a>
+                                    </li>
+
+                                    <li>
+                                        <a href="/apartment/student/0/09/search">
+                                            <font style="vertical-align: inherit;">
+                                                <font style="vertical-align: inherit;">D2 * 09寝室</font>
+                                            </font>
+                                        </a>
+                                    </li>
+
+                                    <li>
+                                        <a href="/apartment/student/0/10/search">
+                                            <font style="vertical-align: inherit;">
+                                                <font style="vertical-align: inherit;">D2 * 10寝室</font>
+                                            </font>
+                                        </a>
+                                    </li>
+
+                                    <li>
+                                        <a href="/apartment/student/0/11/search">
+                                            <font style="vertical-align: inherit;">
+                                                <font style="vertical-align: inherit;">D2 * 11寝室</font>
+                                            </font>
+                                        </a>
+                                    </li>
+
+                                    <li>
+                                        <a href="/apartment/student/0/12/search">
+                                            <font style="vertical-align: inherit;">
+                                                <font style="vertical-align: inherit;">D2 * 12寝室</font>
+                                            </font>
+                                        </a>
+                                    </li>
+
+                                    <li>
+                                        <a href="/apartment/student/0/13/search">
+                                            <font style="vertical-align: inherit;">
+                                                <font style="vertical-align: inherit;">D2 * 13寝室</font>
+                                            </font>
+                                        </a>
+                                    </li>
+
+                                    <li>
+                                        <a href="/apartment/student/0/14/search">
+                                            <font style="vertical-align: inherit;">
+                                                <font style="vertical-align: inherit;">D2 * 14寝室</font>
+                                            </font>
+                                        </a>
+                                    </li>
+
+                                    <li>
+                                        <a href="/apartment/student/0/15/search">
+                                            <font style="vertical-align: inherit;">
+                                                <font style="vertical-align: inherit;">D2 * 15寝室</font>
+                                            </font>
+                                        </a>
+                                    </li>
+
+                                    <li>
+                                        <a href="/apartment/student/0/16/search">
+                                            <font style="vertical-align: inherit;">
+                                                <font style="vertical-align: inherit;">D2 * 16寝室</font>
+                                            </font>
+                                        </a>
+                                    </li>
+
+                                    <li>
+                                        <a href="/apartment/student/0/17/search">
+                                            <font style="vertical-align: inherit;">
+                                                <font style="vertical-align: inherit;">D2 * 17寝室</font>
+                                            </font>
+                                        </a>
+                                    </li>
+
+                                    <li>
+                                        <a href="/apartment/student/0/18/search">
+                                            <font style="vertical-align: inherit;">
+                                                <font style="vertical-align: inherit;">D2 * 18寝室</font>
+                                            </font>
+                                        </a>
+                                    </li>
+
+                                    <li>
+                                        <a href="/apartment/student/0/19/search">
+                                            <font style="vertical-align: inherit;">
+                                                <font style="vertical-align: inherit;">D2 * 19寝室</font>
+                                            </font>
+                                        </a>
+                                    </li>
+
+                                    <li>
+                                        <a href="/apartment/student/0/20/search">
+                                            <font style="vertical-align: inherit;">
+                                                <font style="vertical-align: inherit;">D2 * 20寝室</font>
+                                            </font>
+                                        </a>
+                                    </li>
+
+                                    <li>
+                                        <a href="/apartment/student/0/21/search">
+                                            <font style="vertical-align: inherit;">
+                                                <font style="vertical-align: inherit;">D2 * 21寝室</font>
+                                            </font>
+                                        </a>
+                                    </li>
+
+                                    <li>
+                                        <a href="/apartment/student/0/22/search">
+                                            <font style="vertical-align: inherit;">
+                                                <font style="vertical-align: inherit;">D2 * 22寝室</font>
+                                            </font>
+                                        </a>
+                                    </li>
+
+                                    <li>
+                                        <a href="/apartment/student/0/23/search">
+                                            <font style="vertical-align: inherit;">
+                                                <font style="vertical-align: inherit;">D2 * 23寝室</font>
+                                            </font>
+                                        </a>
+                                    </li>
+
+                                    <li>
+                                        <a href="/apartment/student/0/24/search">
+                                            <font style="vertical-align: inherit;">
+                                                <font style="vertical-align: inherit;">D2 * 24寝室</font>
+                                            </font>
+                                        </a>
+                                    </li>
+
+                                    <li>
+                                        <a href="/apartment/student/0/25/search">
+                                            <font style="vertical-align: inherit;">
+                                                <font style="vertical-align: inherit;">D2 * 25寝室</font>
+                                            </font>
+                                        </a>
+                                    </li>
+
+                                    <li>
+                                        <a href="/apartment/student/0/26/search">
+                                            <font style="vertical-align: inherit;">
+                                                <font style="vertical-align: inherit;">D2 * 26寝室</font>
+                                            </font>
+                                        </a>
+                                    </li>
+
+                                    <li>
+                                        <a href="/apartment/student/0/27/search">
+                                            <font style="vertical-align: inherit;">
+                                                <font style="vertical-align: inherit;">D2 * 27寝室</font>
+                                            </font>
+                                        </a>
+                                    </li>
+
+                                    <li>
+                                        <a href="/apartment/student/0/28/search">
+                                            <font style="vertical-align: inherit;">
+                                                <font style="vertical-align: inherit;">D2 * 28寝室</font>
+                                            </font>
+                                        </a>
+                                    </li>
+
+                                    <li>
+                                        <a href="/apartment/student/0/29/search">
+                                            <font style="vertical-align: inherit;">
+                                                <font style="vertical-align: inherit;">D2 * 29寝室</font>
+                                            </font>
+                                        </a>
+                                    </li>
+
+                                    <li>
+                                        <a href="/apartment/student/0/30/search">
+                                            <font style="vertical-align: inherit;">
+                                                <font style="vertical-align: inherit;">D2 * 30寝室</font>
+                                            </font>
+                                        </a>
+                                    </li>
+
+                                </ul>
+
+                            </div>
+
+                        </th>
+                        <th class="" colspan="2">
+                            <input class="shuru" style="color:black" type="number" maxlength="10" required="">
+                            <a id="search_content" href="#" style="color:white;margin-left:5px" class="search">
+                                <font style="vertical-align: inherit;">
+                                    <font style="vertical-align: inherit;" onclick="findNum()">学号搜索</font>
+                                </font>
+                            </a>
+                        </th>
+                    </tr>
+                    <tr class="" style="text-align:center">
+                        <td class="active">
+                            <font style="vertical-align: inherit;">
+                                <font style="vertical-align: inherit;">学号</font>
+                            </font>
+                        </td>
+                        <td class="active">
+                            <font style="vertical-align: inherit;">
+                                <font style="vertical-align: inherit;">寝室</font>
+                            </font>
+                        </td>
+                        <td class="active">
+                            <font style="vertical-align: inherit;">
+                                <font style="vertical-align: inherit;">姓名</font>
+                            </font>
+                        </td>
+                        <td class="active">
+                            <font style="vertical-align: inherit;">
+                                <font style="vertical-align: inherit;">性别</font>
+                            </font>
+                        </td>
+                        <td class="active">
+                            <font style="vertical-align: inherit;">
+                                <font style="vertical-align: inherit;">班级</font>
+                            </font>
+                        </td>
+                        <td class="active">
+                            <font style="vertical-align: inherit;">
+                                <font style="vertical-align: inherit;">入住日期</font>
+                            </font>
+                        </td>
+                        <td class="active">
+                            <font style="vertical-align: inherit;">
+                                <font style="vertical-align: inherit;">在住状态</font>
+                            </font>
+                        </td>
+                    </tr>
+                </tbody>
+
+            </table>
+           <!-- <button onclick="goPage('first')">首页</button> -->
+            <!-- <button onclick="goPage('prev')">上一页</button> -->
+             <!-- <span class="yema"></span>/共<span class="zongye"></span>页 -->
+            <!-- <input type="" name="" id="jump" > -->
+            <!-- <button onclick="goPage('jump')">Go</button> -->
+            <a onclick="" href="http://127.0.0.1:3000/students-add.html">增加学生</a>
+            <!-- <button onclick="goPage('last')">尾页</button> -->
+            从当前列表中删除学生信息:<input type="text" id="delNum" />
+            <button id="find" onclick="delNum()">删除</button>
+             <!-- <button id="shengxu" onclick="shengxu()">价格升序</button>
+               <button id="jiangxu" onclick="jiangxu()">价格降序</button> -->
+
+        </div>
+
+    </div>
+</body>
+<!-- <script src="../node_modules/mockjs/dist/mock.js"></script> -->
+<script>
+
+ let pagesize=5
+let total=3
+let nowpage=1
+ getStudent(1)
+
+    function  getStudent(page){
+         let storage =window.localStorage;
+                let getusername = storage.getItem('username');
+                $(".username").html(getusername)
+      let url ='http://127.0.0.1:3000/goods/getStudent'
+        let data ={
+                pagesize:5,
+                page:1
+        }
+
+        $.post(url,data,function(res){
+            console.log(res)
+            if (res.err==0) {
+                    load(res.data)
+             }
+        })
+}
+   
+//渲染页面数据
+function load(data){
+     if(data.length>0){
+        console.log(888)
+        let str=''
+        for(i=0;i<data.length;i++){
+     str+=` <tr class="" style="text-align:center">
+                        <td class="active">
+                            <font style="vertical-align: inherit;">
+                                <font style="vertical-align: inherit;">${data[i]['num']}</font>
+                            </font>
+                        </td>
+                        <td class="active">
+                            <font style="vertical-align: inherit;">
+                                <font style="vertical-align: inherit;">${data[i]['bedNum']}</font>
+                            </font>
+                        </td>
+                        <td class="active">
+                            <font style="vertical-align: inherit;">
+                                <font style="vertical-align: inherit;">${data[i]['name']}</font>
+                            </font>
+                        </td>
+                        <td class="active">
+                            <font style="vertical-align: inherit;">
+                                <font style="vertical-align: inherit;">${data[i]['sex']}</font>
+                            </font>
+                        </td>
+                        <td class="active">
+                            <font style="vertical-align: inherit;">
+                                <font style="vertical-align: inherit;">${data[i]['banji']}</font>
+                            </font>
+                        </td>
+                        <td class="active">
+                            <font style="vertical-align: inherit;">
+                                <font style="vertical-align: inherit;">${data[i]['time']}
+                        </td>
+                        <td class="active">
+                            <font style="vertical-align: inherit;">
+                                <font style="vertical-align: inherit;">${data[i]['stutas']}</font>
+                            </font>
+                        </td>
+                    </tr>`
+
+        }
+                 $('tbody').append(str);              
+     }
+   }
+//学号查询函数
+ function findNum(){
+     let url ='http://127.0.0.1:3000/goods/findNum'
+    
+        let data ={
+                num:$(".shuru").val()
+        }
+
+        $.post(url,data,function(res){
+            if(res.err=="0"){
+                console.log(res.data)
+                 if(res.data.length == 0){
+                    alert("没有该学生信息")
+                }else{
+                    var infoo = res.data;
+                    var info = "该学生存在：姓名："+infoo[0].name+"，班级："+infoo[0].banji;
+                    alert(info)
+                  // load(res.data)
+
+                }
+            }
+            else{
+                alert("没有该学生信息")
+            }
+
+
+        })
+ }
+//页数跳转
+
+function goPage(type){
+    //page标书目标页
+   let page=1;
+   switch (type) {
+     case 'first' : 
+     page=1;
+     break;
+     case 'last' : 
+     page=total;
+      console.log(page)
+     break;
+      case 'jump' : 
+     page=$('#jump').val()
+     break;
+     case 'prev':
+     page=nowpage-1
+     //边界判断
+        if(page==0){
+            alert("当前已经是首页了")
+        }
+     break;
+      case 'next':
+     page=nowpage+1
+       if(page<nowpage){
+        alert("没有更多数据了")
+       }
+     break;
+   }
+ getStudent(page);
+}
+
+   //删除学生
+   function delNum(){
+     let url ='http://127.0.0.1:3000/goods/delNum'
+    
+        let data ={
+                num:$("#delNum").val()
+        }
+
+        $.post(url,data,function(res){
+            console.log(res)
+
+
+        })
+   }
+</script>
+
+</html>

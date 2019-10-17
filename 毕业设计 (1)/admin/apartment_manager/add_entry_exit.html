@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>学生宿舍管理系统</title>
+    <link rel="stylesheet" href="../static/css/bootstrap.css">
+    <script src="../static/js/jquery-3.3.1.js"></script>
+    <script src="../static/js/bootstrap.js"></script>
+</head>
+
+<body>
+    <div style="display:flex;align-items: center;">
+        <img src="../static/img/log.png">
+        <h1 style="margin-left:200px;">学&nbsp生&nbsp宿&nbsp舍&nbsp后&nbsp台&nbsp管&nbsp理系&nbsp统</h1>
+    </div>
+
+    <ul class="nav nav-tabs" style="background:orange">
+        <li class="tab_item" style="margin-left:100px;"><a onmouseover="this.style.background='white';this.style.color='orange';" onmouseleave="if(this.parentNode.className == 'tab_item'){this.style.background='orange';this.style.color='white';}" href="index.html" style="color:white">首页</a></li>
+        <li class="tab_item"><a onmouseover="this.style.background='white';this.style.color='orange';" onmouseleave="if(this.parentNode.className == 'tab_item'){this.style.background='orange';this.style.color='white';}" href="room.html" style="color:white">学生宿舍管理</a></li>
+        <li class="tab_item"><a onmouseover="this.style.background='white';this.style.color='orange';" onmouseleave="if(this.parentNode.className == 'tab_item'){this.style.background='orange';this.style.color='white';}" href="student.html" style="color:white">学生信息管理</a></li>
+        <li class="tab_item"><a onmouseover="this.style.background='white';this.style.color='orange';" onmouseleave="if(this.parentNode.className == 'tab_item'){this.style.background='orange';this.style.color='white';}" href="repair.html" style="color:white">宿舍报修信息管理</a></li>
+        <li class="tab_item"><a onmouseover="this.style.background='white';this.style.color='orange';" onmouseleave="if(this.parentNode.className == 'tab_item'){this.style.background='orange';this.style.color='white';}" href="cost.html" style="color:white">水电费管理</a></li>
+        <li class="tab_item active"><a style="background:white;color:orange;" onmouseover="this.style.background='white';this.style.color='orange';" onmouseleave="if(this.parentNode.className == 'tab_item'){this.style.background='orange';this.style.color='white';}" href="entry_exit.html"
+                style="color:white">物品出入管理</a></li>
+        <li class="tab_item"><a onmouseover="this.style.background='white';this.style.color='orange';" onmouseleave="if(this.parentNode.className == 'tab_item'){this.style.background='orange';this.style.color='white';}" href="modify_password.html" style="color:white">修改密码</a></li>
+        <div role="presentation" style="float:right;margin:10px 100px 10px 0"><a style="color:white" href="../user/login.html">注销</a></div>
+        <div role="presentation" style="float:right;margin:10px 20px 10px 0"><a style="color:white" href="javascript:;">欢迎您：D2宿舍管理员</a>
+        </div>
+    </ul>
+
+    <div style="margin:auto;width:1000px;height:100%">
+
+        <script src="/static/js/add_entry_exit.js"></script>
+
+        <div class="panel panel-warning" style="background:	#F2F2F2;margin-top:30px;">
+            <div class="panel-heading">
+                <font style="vertical-align: inherit;">
+                    <font style="vertical-align: inherit;">新增出入记录</font>
+                </font>
+            </div>
+            <div class="panel-body" style="margin-left:50px;color:orange">
+                <form action="/apartment/entry_exit/add/" method="post">
+                    <input type="hidden" name="csrfmiddlewaretoken" value="J4Kte27rETTqUt9fOQqeK44VyDKs0oHo1bjdJgVBQdA7o3fBADQvFRlCrOr3ZU12">
+                    <div class="form-group">
+                        <label><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">学生学号&nbsp;&nbsp;&nbsp;&nbsp;</font></font></label><label id="student_error" style="color:red;"></label>
+                        <input type="number" class="form-control" id="student_id" name="student_id" value="" style="width:200px;" onchange="find_student()">
+                    </div>
+                    <div class="form-group">
+                        <label><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">物品名称</font></font></label>
+                        <input type="text" class="form-control" required="" id="name" name="name" value="" style="width:200px;">
+                    </div>
+                    <div class="form-group">
+                        <label><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">学生姓名：</font></font></label><label id="student_name"></label>
+                    </div>
+                    <div class="form-group">
+                        <label><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">学生性别：</font></font></label><label id="student_sex"></label>
+                    </div>
+                    <div class="form-group">
+                        <label><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">学生寝室：</font></font></label><label id="student_room"></label>
+                    </div>
+                    <div class="form-group">
+                        <div class="btn-group">
+                            <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <span id="status_show"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">请选择</font></font></span><span style="color:orange" class="caret"></span>
+                        </button>
+                            <input type="text" id="status" required="" name="status" value="" style="display:none">
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a href="javascript:;" onclick="document.getElementById('status_show').innerHTML=this.innerHTML;document.getElementById('status').value=this.innerHTML;">
+                                        <font style="vertical-align: inherit;">
+                                            <font style="vertical-align: inherit;">出</font>
+                                        </font>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="javascript:;" onclick="document.getElementById('status_show').innerHTML=this.innerHTML;document.getElementById('status').value=this.innerHTML;">
+                                        <font style="vertical-align: inherit;">
+                                            <font style="vertical-align: inherit;">入</font>
+                                        </font>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <font style="vertical-align: inherit;">
+                            <font style="vertical-align: inherit;"><input type="submit" style="background:orange;border:0" class="btn btn-primary" value="保存"></font>
+                        </font>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>学生宿舍管理系统</title>
+    <link rel="stylesheet" href="../static/css/bootstrap.css">
+    <script src="../static/js/jquery-3.3.1.js"></script>
+    <script src="../static/js/bootstrap.js"></script>
+</head>
+<body>
+<div>
+    <img src="../static/img/bar.jpg">
+</div>
+
+<ul class="nav nav-tabs" style="background:orange">
+    <li class="tab_item" style="margin-left:100px;"><a onmouseover="this.style.background='white';this.style.color='orange';"
+                                                              onmouseleave="if(this.parentNode.className == 'tab_item'){this.style.background='orange';this.style.color='white';}"
+                                                              href="index.html" style="color:white">首页</a></li>
+    <li class="tab_item active"><a style="background:white;color:orange; " onmouseover="this.style.background='white';this.style.color='orange';"
+                            onmouseleave="if(this.parentNode.className == 'tab_item'){this.style.background='orange';this.style.color='white';}"
+                            href="building.html" style="color:white">宿舍楼信息管理</a></li>
+    <li class="tab_item"><a onmouseover="this.style.background='white';this.style.color='orange';"
+                            onmouseleave="if(this.parentNode.className == 'tab_item'){this.style.background='orange';this.style.color='white';}"
+                            href="student.html" style="color:white">学生信息管理</a></li>
+    <li class="tab_item"><a onmouseover="this.style.background='white';this.style.color='orange';"
+                            onmouseleave="if(this.parentNode.className == 'tab_item'){this.style.background='orange';this.style.color='white';}"
+                            href="manager.html" style="color:white">宿管信息管理</a></li>
+    <li class="tab_item"><a onmouseover="this.style.background='white';this.style.color='orange';"
+                            onmouseleave="if(this.parentNode.className == 'tab_item'){this.style.background='orange';this.style.color='white';}"
+                            href="modify_password.html" style="color:white">密码修改</a></li>
+    <div role="presentation" style="float:right;margin:10px 100px 10px 0"><a style="color:white"
+                                                                             href="../user/login.html">注销</a></div>
+    <div role="presentation" style="float:right;margin:10px 20px 10px 0"><a style="color:white" href="javascript:;">欢迎您：系统管理员01</a>
+    </div>
+</ul>
+
+
+<div style="margin:auto;width:1000px;height:100%">
+    <div class="panel panel-warning" style="background:	#F2F2F2;margin-top:30px;">
+        <div class="panel-heading">修改信息<label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="javascript:;" style="color:orange" onclick="if(confirm('确定删除吗？')==true){window.location.href='/info/building/delete/{{ dormitory.name }}/';}">删除</a></label></div>
+        <div class="panel-body" style="margin-left:50px;color:orange">
+            <form action="/info/building/change/" method="post">
+                <input type="text" {% if status == 1 %} value="{{ dormitory.before_name }}" {% else %} value="{{ dormitory.name }}" {% endif %} name="before_name" style="display:none">
+                  <div class="form-group">
+                      <label style="">宿舍编号</label><label style="color:red;font-weight:20"></label>
+                      <input type="text" class="form-control" name="name" value="D2" style="width:400px;">
+                  </div>
+                  <div class="form-group">
+                        <label>层数</label>
+                        <input type="number" class="form-control" name="height" value="7" style="width:400px;">
+                  </div>
+                  <div class="form-group">
+                        <label>每层寝室数</label>
+                        <input type="number" class="form-control" name="width" value="30" style="width:400px;">
+                  </div>
+                  <div class="form-group">
+                        <label>单间床位数</label>
+                        <input type="number" class="form-control" name="room_capacity" value="4" style="width:400px;">
+                  </div>
+                  <div class="form-group">
+                        <label>已入住人数</label>
+                        <input type="number" class="form-control" name="used" value="20" style="width:400px;">
+                  </div>
+                  <div class="form-group">
+                        <label>可入住人数</label>
+                        <input type="number" class="form-control" name="capacity" value="820" style="width:400px;">
+                  </div>
+                  <div class="form-group">
+                        <input type="submit" style="background:orange;border:0" class="btn btn-primary" value="保存">
+                  </div>
+            </form>
+        </div>
+    </div>
+
+</div>
+
+</body>
+</html>

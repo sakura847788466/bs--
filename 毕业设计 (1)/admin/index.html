@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>首页</title>
+    <link rel="stylesheet" href="./public/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="./static/css/style.css" />
+
+</head>
+
+<body>
+    <div id="header">
+        <div class="overlay text-center">
+            <div class="cTitle">
+                <h2>欢迎使用广西民族师范学院宿舍管理平台！！！</h2>
+                <img src="../static/img/fire.gif" />
+            </div>
+        </div>
+    </div>
+
+
+    <!--导航条开始-->
+    <nav class="navbar navbar-inverse">
+        <div class="container">
+
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#mNavbar-collapse-1" aria-expanded="false">
+		        
+		        <span class="icon-bar"></span>
+		        <span class="icon-bar"></span>
+		        <span class="icon-bar"></span>
+		      </button>
+                <a class="navbar-brand" style="line-height:25px;" href="http://www.gxnun.net">民师院官网</a>
+                <p class="navbar-text">| 宿舍管理专家</p>
+            </div>
+
+            <div class="collapse navbar-collapse" id="mNavbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="active"><a href="#">首页</a></li>
+                    <li><a href="#" onclick="yanzhengpanduan()">查询</a></li>
+                    <li><a href="#" onclick="repair()">报修</a></li>
+                    <li><a href="#">水电费管理</a></li>
+                    <li>
+                        <a href="#iLogin" data-toggle="modal" class="denglu">登录</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+    <!--导航条结束-->
+
+
+    <!--main开始-->
+    <div class="container">
+        <div class="main row">
+            <!--轮播图开始-->
+            <div class="main_carousel col-md-8">
+                <div id="mCarousel" class="carousel slide" data-ride="carousel">
+
+                    <ol class="carousel-indicators">
+                        <li data-target="#mCarousel" data-slide-to="0" class="active"></li>
+                        <li data-target="#mCarousel" data-slide-to="1"></li>
+                        <li data-target="#mCarousel" data-slide-to="2"></li>
+                        <li data-target="#mCarousel" data-slide-to="3"></li>
+                    </ol>
+
+                    <div class="carousel-inner" role="listbox">
+                        <div class="item active">
+                            <img src="../static/img/carousel_1.png" alt="">
+                        </div>
+                        <div class="item">
+                            <img src="../static/img/carousel_2.png" alt="">
+                        </div>
+                        <div class="item">
+                            <img src="../static/img/carousel_3.png" alt="">
+                        </div>
+                        <div class="item">
+                            <img src="../static/img/carousel_4.png" alt="">
+                        </div>
+                    </div>
+
+                    <a class="left carousel-control" href="#mCarousel" role="button" data-slide="prev">
+                        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="right carousel-control" href="#mCarousel" role="button" data-slide="next">
+                        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
+                </div>
+
+            </div>
+            <!--轮播图结束-->
+            <!--重要消息通知开始-->
+            <div class="jumbotron main_info col-md-4">
+                <div class="container">
+                    <article>
+                        <h3 class="text-danger">重要通知:</h3>
+                        <li><a href="http://www.gxnun.net/info/1008/8349.htm" target="_blank" title="广西民族师范学院2019年引进高层次人才公告">广西民族师范学院2019年引进高层次人才公告</a>（12-07）
+                           </li>
+                           <li><a href="info/1008/8373.htm" target="_blank" title="学校一周会议安排表第16周（6月10日—6月14日）">学校一周会议安排表第16周（6月10日—6月14日）</a>（06-10）
+                         <img src="./static/img/new.gif">   </li>
+
+                    </article>
+                    <a href="http://www.gxnun.net/xwzx/tzgg.htm" class="btn btn-primary  pull-right">更多详情 <span class="glyphicon glyphicon-menu-right"></span></a>
+                </div>
+            </div>
+            <!--重要消息通知结束-->
+        </div>
+        <!--main结束-->
+        <!--通知开始-->
+        <div class="infos row">
+
+            <div class="col-md-4 ">
+                <div class="panel panel-info">
+                    <div class="panel-heading">物理与电子工程学院</div>
+                    <div class="list-group">
+                        <!-- <a href="" class="list-group-item">关于xxx的通知<span class="badge">2017-5-25</span></a> -->
+                        <a href="http://wdx.gxnun.edu.cn/info/1062/4540.htm" title="关于2018届毕业生毕业典礼暨学位授予仪式的通知" target="_blank" class="list-group-item">
+                    <span class="titlestyle16109">关于2018届毕业生毕业典礼暨学位授予仪式的通知</span></a>
+
+                    <a href="http://wdx.gxnun.edu.cn/info/1062/4541.htm" title="关于2018年电子设计竞赛选拔赛的通知" target="_blank" class="list-group-item">
+                    <span class="titlestyle16109">关于2018年电子设计竞赛选拔赛的相关通知</span></a>
+
+                    <a href="http://wdx.gxnun.edu.cn/info/1062/4279.htm" title="关于物理与电子工程学院期末工作会议的通知" target="_blank" class="list-group-item">
+                    <span class="titlestyle16109">关于物理与电子工程学院期末工作会议的通知</span></a>
+    
+                    <a href="http://wdx.gxnun.edu.cn/info/1062/4279.htm" title="关于物理与电子工程学院期末工作会议的通知" target="_blank" class="list-group-item">
+                                    <span class="titlestyle16109">关于物理与电子工程学院期末工作会议的通知</span></a>
+
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="panel panel-info">
+                    <div class="panel-heading">外国语学院</div>
+                    <div class="list-group">
+                        <a href="info/2024/7688.htm" title="【喜报】共青团广西民族师范学院外国语学院委员会荣获2018年度崇左市五四红旗团委荣誉称号" target="_blank" class="list-group-item">
+                    <span class="titlestyle55728">【喜报】共青团广西民族师范学院外国语学院</span></a>
+
+                        <a href="http://wyx.gxnun.edu.cn/info/2024/6583.htm" title="【考研喜报】黄亦怡考取广西师范学院硕士研究生" target="_blank" class="list-group-item">
+                    <span class="titlestyle55728">【考研喜报】黄亦怡考取广西师范学院硕士研</span></a>
+
+                    <a href="info/2024/6583.htm" title="【考研喜报】黄亦怡考取广西师范学院硕士研究生" target="_blank" class="list-group-item">
+                    <span class="titlestyle55728">【考研喜报】黄亦怡考取广西师范学院硕士研</span></a>
+
+                    <a href="info/2024/6582.htm" title="【考研喜报】吕柯慧考取广西民族大学硕士研究生" target="_blank" class="list-group-item">
+                    <span class="titlestyle55728">【考研喜报】吕柯慧考取广西民族大学硕士研</span></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="panel panel-info">
+                    <div class="panel-heading">数学与计算机学院</div>
+                    <div class="list-group">
+                       <a href="info/1202/2818.htm" title="数计学院一周会议安排表（12月17日-12月21日）" target="_blank" class="list-group-item">
+                    <span class="titlestyle52236">数计学院一周会议安排表（12月17日-12月21日）</span></a>
+
+                    <a href="info/1202/2818.htm" title="数计学院一周会议安排表（12月17日-12月21日）" target="_blank" class="list-group-item">
+                    <span class="titlestyle52236">2013级毕业论文答辩工作指南(5月27日更新)</span></a>
+
+                    <a href="info/1202/2818.htm" title="数计学院一周会议安排表（12月17日-12月21日）" target="_blank" class="list-group-item">
+                    <span class="titlestyle52236">广西高校重点学科(应用数学)2017年招标评标公示</span></a>
+
+                    <a href="info/1202/2818.htm" title="数计学院一周会议安排表（12月17日-12月21日）" target="_blank" class="list-group-item">
+                    <span class="titlestyle52236">数计学院一周会议安排表（12月17日-12月21日）</span></a>
+                       
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <!--通知结束-->
+        <hr />
+        <div id="iForum" class="row">
+            <div class="col-md-4 iForum_left">
+                <div class="alert alert-info text-center">
+                    <h4>失物招领</h4>
+                    <hr />
+                    <div class="iForum_cDetails">
+                        <img src="../static/img/kill.jpeg" />
+                        <p>联系我联系我联系我联系我联系我联系我联系我我联系我联系我联系我我联系我联系我联系我我联系我联系我联系我我联系我联系我联系我联系我联系我联系我联系我联系我联联系我联系我联系我联系我联系我联xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx系我</p>
+                    </div>
+                    <hr />
+                    <a href="" class="btn btn-primary">查看更多</a>
+                </div>
+            </div>
+            <div class="col-md-4 iForum_middle">
+                <div class="alert alert-success text-center">
+
+                    <h4>我有话说</h4>
+                    <hr />
+                    <div class="iForum_cDetails">
+                        <div class="list-group">
+                            <a href="" class="list-group-item list-group-item-success">XXXXXXXXXX <small class="pull-right">2017-03-08</small></a>
+                            <a href="" class="list-group-item list-group-item-success">XXXXXXXXXX <small class="pull-right">2017-03-08</small></a>
+                            <a href="" class="list-group-item list-group-item-success">XXXXXXXXXX <small class="pull-right">2017-03-08</small></a>
+                            <a href="" class="list-group-item list-group-item-success">XXXXXXXXXX <small class="pull-right">2017-03-08</small></a>
+                            <a href="" class="list-group-item list-group-item-success">XXXXXXXXXX <small class="pull-right">2017-03-08</small></a>
+                        </div>
+                    </div>
+                    <hr />
+                    <a href="" class="btn btn-primary">查看更多</a>
+
+                </div>
+            </div>
+            <div class="iForum_right col-md-4">
+                <div class="alert alert-danger text-center">
+                    <h4>宿舍管理规定</h4>
+                    <hr />
+                    <div class="iForum_cDetails">
+                        <ol>
+                            <li>
+                                遵守作息时间，按时就寝，按时熄灯，按时起床，不影响他人就寝
+                            </li>
+                            <li>未经生活老师允许，不能自行调换寝室和床位。</li>
+                            <li>寝室实行轮流值日，值日生必须认真打扫卫生，及时清理垃圾、关门、</li>
+                            <li>应保存好自己的贵重物品，防止丢失</li>
+                        </ol>
+                    </div>
+                    <hr />
+                    <a href="" class="btn btn-primary">查看更多</a>
+                </div>
+            </div>
+        </div>
+        <hr />
+
+        <!-- Section: works -->
+        <section id="dorms" class="home-section color-dark text-center bg-white">
+            <div class="page-header panel-primary">
+                <h2>校园风光<small>第4届摄影评比</small></h2>
+            </div>
+            <div class="dorms_carousel  hidden-sm hidden-xs">
+                <div id="mDormsCarousel" class="carousel slide" data-ride="carousel">
+
+                    <ol class="carousel-indicators">
+                        <li data-target="#mDormsCarousel" data-slide-to="0" class="active"></li>
+                        <li data-target="#mDormsCarousel" data-slide-to="1"></li>
+                    </ol>
+                    <div class="carousel-inner" role="listbox">
+                        <div class="item active">
+                            <div class="row">
+                                <div class="col-xs-3">
+                                    <img class="img-thumbnail img-responsive" src="../static/img/fen7.jpg" alt="">
+                                    <p class="text-center ">海珠南区G138</p>
+                                </div>
+                                <div class="col-xs-3">
+                                    <img class="img-thumbnail img-responsive" src="../static/img/fen2.jpg" alt="">
+                                    <p class="text-center">海珠南区G138</p>
+                                </div>
+                                <div class="col-xs-3">
+                                    <img class="img-thumbnail img-responsive" src="../static/img/fen9.jpg" alt="">
+                                    <p class="text-center">海珠南区G138</p>
+                                </div>
+                                <div class="col-xs-3">
+                                    <img class="img-thumbnail img-responsive" src="../static/img/fen4.jpg" alt="">
+                                    <p class="text-center">海珠南区G138</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item ">
+                            <div class="row">
+                                <div class="col-xs-3">
+                                    <img class="img-thumbnail img-responsive" src="../static/img/fen.jpg" alt="">
+                                    <p class="text-center">海珠南区G138</p>
+                                </div>
+                                <div class="col-xs-3">
+                                    <img class="img-thumbnail img-responsive" src="../static/img/fen10.jpg" alt="">
+                                    <p class="text-center">海珠南区G138</p>
+                                </div>
+                                <div class="col-xs-3">
+                                    <img class="img-thumbnail img-responsive" src="../static/img/fen11.jpg" alt="">
+                                    <p class="text-center">白云G138</p>
+                                </div>
+                                <div class="col-md-3">
+                                    <img class="img-thumbnail img-responsive" src="../static/img/fen4.jpg" alt="">
+                                    <p class="text-center">海珠北区G138</p>
+                                </div>
+                            </div>
+                        </div>
+
+
+                    </div>
+
+
+                </div>
+
+            </div>
+            <!--轮播图结束-->
+
+            <div class="dorms_carousel  hidden-xs hidden-md hidden-lg">
+
+                <div id="mDormsCarousel2" class="carousel slide" data-ride="carousel">
+
+                    <ol class="carousel-indicators">
+                        <li data-target="#mDormsCarousel2" data-slide-to="0" class="active"></li>
+                        <li data-target="#mDormsCarousel2" data-slide-to="1"></li>
+                        <li data-target="#mDormsCarousel2" data-slide-to="2"></li>
+                        <li data-target="#mDormsCarousel2" data-slide-to="3"></li>
+                    </ol>
+                    <div class="carousel-inner" role="listbox">
+                        <div class="item active">
+                            <div class="row">
+                                <div class="col-xs-6">
+                                    <img class="img-thumbnail img-responsive" src="../static/img/dorm1.jpg" alt="">
+                                    <p class="text-center">海珠南区G138</p>
+                                </div>
+                                <div class="col-xs-6">
+                                    <img class="img-thumbnail img-responsive" src="../static/img/dorm2.jpg" alt="">
+                                    <p class="text-center">海珠南区G138</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item ">
+                            <div class="row">
+                                <div class="col-xs-6">
+                                    <img class="img-thumbnail img-responsive" src="../static/img/dorm4.jpg" alt="">
+                                    <p class="text-center">海珠南区G138</p>
+                                </div>
+                                <div class="col-xs-6">
+                                    <img class="img-thumbnail img-responsive" src="../static/img/dorm2.jpg" alt="">
+                                    <p class="text-center">海珠南区G138</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item ">
+                            <div class="row">
+                                <div class="col-xs-6">
+                                    <img class="img-thumbnail img-responsive" src="../static/img/dorm5.jpg" alt="">
+                                    <p class="text-center">白云G138</p>
+                                </div>
+                                <div class="col-md-6">
+                                    <img class="img-thumbnail img-responsive" src="../static/img/dorm6.jpg" alt="">
+                                    <p class="text-center">海珠北区G138</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item ">
+                            <div class="row">
+                                <div class="col-xs-6">
+                                    <img class="img-thumbnail img-responsive" src="../static/img/dorm1.jpg" alt="">
+                                    <p class="text-center">海珠南区G138</p>
+                                </div>
+                                <div class="col-xs-6">
+                                    <img class="img-thumbnail img-responsive" src="../static/img/dorm3.jpg" alt="">
+                                    <p class="text-center">海珠南区G138</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--轮播图结束-->
+
+            <div class="dorms_carousel  hidden-sm hidden-md hidden-lg">
+
+                <div id="mDormsCarousel3" class="carousel slide" data-ride="carousel">
+
+                    <ol class="carousel-indicators">
+                        <li data-target="#mDormsCarousel3" data-slide-to="0" class="active"></li>
+                        <li data-target="#mDormsCarousel3" data-slide-to="1"></li>
+                        <li data-target="#mDormsCarousel3" data-slide-to="2"></li>
+                        <li data-target="#mDormsCarousel3" data-slide-to="3"></li>
+                        <li data-target="#mDormsCarousel3" data-slide-to="4"></li>
+                        <li data-target="#mDormsCarousel3" data-slide-to="5"></li>
+                        <li data-target="#mDormsCarousel3" data-slide-to="6"></li>
+                        <li data-target="#mDormsCarousel3" data-slide-to="7"></li>
+                    </ol>
+                    <div class="carousel-inner" role="listbox">
+                        <div class="item active">
+                            <div class="row">
+                                <div class="col-xs-12">
+                                    <img class="img-thumbnail img-responsive" src="../static/img/dorm1.jpg" alt="">
+                                    <p class="text-center">海珠南区G138</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="item ">
+                            <div class="row">
+                                <div class="col-xs-12">
+                                    <img class="img-thumbnail img-responsive" src="../static/img/dorm4.jpg" alt="">
+                                    <p class="text-center">海珠南区G138</p>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="item ">
+                            <div class="row">
+                                <div class="col-xs-12">
+                                    <img class="img-thumbnail img-responsive" src="../static/img/dorm5.jpg" alt="">
+                                    <p class="text-center">白云G138</p>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="item ">
+                            <div class="row">
+                                <div class="col-xs-12">
+                                    <img class="img-thumbnail img-responsive" src="../static/img/dorm1.jpg" alt="">
+                                    <p class="text-center">海珠南区G138</p>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="item ">
+                            <div class="row">
+
+                                <div class="col-xs-12">
+                                    <img class="img-thumbnail img-responsive" src="../static/img/dorm2.jpg" alt="">
+                                    <p class="text-center">海珠南区G138</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item ">
+                            <div class="row">
+
+                                <div class="col-xs-12">
+                                    <img class="img-thumbnail img-responsive" src="../static/img/dorm2.jpg" alt="">
+                                    <p class="text-center">海珠南区G138</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item ">
+                            <div class="row">
+
+                                <div class="col-md-12">
+                                    <img class="img-thumbnail img-responsive" src="../static/img/dorm6.jpg" alt="">
+                                    <p class="text-center">海珠北区G138</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item ">
+                            <div class="row">
+                                <div class="col-xs-12">
+                                    <img class="img-thumbnail img-responsive" src="../static/img/dorm3.jpg" alt="">
+                                    <p class="text-center">海珠南区G138</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--轮播图结束-->
+
+
+        </section>
+        <!-- /Section: works -->
+    </div>
+    <footer class="cFooter row">
+        <div class="container">
+            <div class="cFooter-col col-sm-4 text-center">
+
+                <h4>服务</h4>
+                <hr />
+                <ul class="list-unstyled">
+                    <li><a href="">XXXXXX</a></li>
+                    <li><a href="">XXXXXX</a></li>
+                    <li><a href="">XXXXXX</a></li>
+                    <li><a href="">XXXXXX</a></li>
+                </ul>
+            </div>
+            <div class="cFooter-col col-sm-4 text-center">
+                <h4>关于</h4>
+                <hr />
+                <ul class="list-unstyled">
+                    <li><a href="">XXXXXX</a></li>
+                    <li><a href="">XXXXXX</a></li>
+                    <li><a href="">XXXXXX</a></li>
+                    <li><a href="">XXXXXX</a></li>
+                </ul>
+            </div>
+            <div class="cFooter-col col-sm-4 text-center">
+                <h4>友情连接</h4>
+                <hr />
+                <ul class="list-unstyled">
+                    <li><a href="">XXXXXX</a></li>
+                    <li><a href="">XXXXXX</a></li>
+                    <li><a href="">XXXXXX</a></li>
+                    <li><a href="">XXXXXX</a></li>
+                </ul>
+            </div>
+        </div>
+
+    </footer>
+
+
+
+
+    <script src="../public/js/jquery-3.2.0.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="../public/js/bootstrap.min.js" type="text/javascript" charset="utf-8"></script>
+</body>
+<script type="text/javascript">
+    let pagesize = 5
+    let total = 0
+        //获取数据  渲染视图
+        //通过ajax 获取首页数据
+    getListdata(1);
+    // cunchu()
+
+    function getListdata() {
+        let storage =window.localStorage;
+        let getusername = storage.getItem('username');
+       $(".denglu").html(getusername)
+        let url = "http://127.0.0.1:3000/goods/getInfouser"
+        let data = {
+        }
+       
+        $.post(url, data, function(res) {
+            console.log(res)
+            if (res.err == 0) {
+                var userName = res.data.name;
+                console.log(userName)
+            }
+        })
+    }
+
+
+  function yanzhengpanduan(){
+    let storage =window.localStorage;
+        let getusername = storage.getItem('username');
+        if(getusername !=="13407786170"){
+            alert("你不是管理员身份，没有权限进行查询")
+        }
+        else{
+            alert("管理员身份已验证，准备跳转到查询页面.......")
+            window.location.href = " http://127.0.0.1:3000/apartment_manager/index.html"
+        }
+  }
+   
+
+   //报修判断  只有是学生才可以进行报修
+   function repair(){
+     let storage =window.localStorage;
+        let getusername = storage.getItem('username');
+        if(getusername !=="1347786170"){
+            alert("当前为学生用户")
+            window.location.href = " http://127.0.0.1:3000/student/index.html"
+
+        }
+        else{
+            alert("管理人员不能进行报修选项")
+        }
+   }
+</script>
+
+</html>

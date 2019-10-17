@@ -1,0 +1,183 @@
+body {
+    /*	background-color: #F5F5F5;*/
+    font-size: 16px;
+    line-height: 1.6em;
+    font-weight: 400;
+}
+
+
+/*hr{
+	border-bottom:1px solid #DDD ;
+}*/
+
+.navbar {
+    border-radius: 0;
+    margin-bottom: 0;
+}
+
+#header {
+    background: url(../img/001.jpg) no-repeat center center;
+    background-size: cover;
+}
+
+#header .overlay {
+    background-color: rgba(2, 2, 2, 0.40);
+    color: white;
+    min-height: 250px;
+}
+
+#header .cTitle {
+    padding: 20px;
+}
+
+#header .cTitle h2 {
+    font-family: "微软雅黑";
+}
+
+#header .cTitle img {
+    max-width: 20%;
+}
+
+.main_aside {
+    padding: 0;
+    margin: 0;
+}
+
+.main_aside_title {
+    font-family: "宋体";
+    font-size: 2em;
+    font-weight: bold;
+}
+
+.main_carousel {
+    /*background-color: #009bf8;*/
+}
+
+.infos .col-md-4,
+.col-md-8 {
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+.main_info {
+    margin-bottom: 0;
+    height: 280px;
+}
+
+#iForum img {
+    max-width: 50%;
+}
+
+.iForum_cDetails {
+    height: 250px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 95%;
+}
+
+.iForum_cDetails p {}
+
+.panel {
+    margin-bottom: 0;
+}
+
+#dorms img {
+    max-width: 256px;
+    max-height: 300px;
+}
+
+element.style {}
+
+.carousel-inner>.item>img,
+.carousel-inner>.item>a>img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin-left: 0;
+    padding-left: 0;
+}
+
+.dorms_carousel ol {
+    margin-bottom: -30px;
+}
+
+.dorms_carousel ol li {
+    border: 1px solid #0c0c0c;
+}
+
+.dorms_carousel ol .active {
+    background-color: #222;
+}
+
+.cFooter {
+    margin-top: 20px;
+    background-color: #222222;
+    padding-top: 20px;
+}
+
+
+/*.cFooter-col{
+	padding: 20px 100px;
+}*/
+
+.cFooter h4 {
+    color: #F2DEDE;
+}
+
+.cFooter hr {
+    border-top: 1px solid #111;
+    width: 80%;
+}
+
+.cFooter li {
+    list-style-type: none;
+    height: 50px;
+}
+
+.cFooter li a:link,
+.cFooter li a:visited {
+    text-decoration: none;
+    color: #D0E9C6;
+}
+
+.cFooter li a:hover,
+.cFooter li a:active {
+    text-decoration: none;
+    color: #985F0D;
+}
+
+
+/*==========查询页面css=============================*/
+
+.cHeader {
+    margin-top: 55px;
+}
+
+.cHeader img {
+    width: 100%;
+    max-height: 200px;
+}
+
+.cHeader h2 {
+    padding-top: 160px;
+    padding-left: 20px;
+    color: red;
+    font-family: "微软雅黑";
+}
+
+.mLine {
+    border-top: 1px solid #000;
+}
+
+.cInquire_left_fill {
+    height: 200px;
+}
+
+.cInquire_right {
+    border: 1px solid #d9edf7;
+    height: 353px;
+}
+
+.cInquire_left .pager {
+    height: 400px;
+}

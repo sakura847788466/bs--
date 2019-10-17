@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>学生宿舍管理系统</title>
+    <link rel="stylesheet" href="../static/css/bootstrap.css">
+    <script src="../static/js/jquery-3.3.1.js"></script>
+    <script src="../static/js/bootstrap.js"></script>
+</head>
+
+<body>
+    <div style="display:flex;align-items: center;">
+        <img src="../static/img/log.png">
+        <h1 style="margin-left:200px;">学&nbsp生&nbsp宿&nbsp舍&nbsp后&nbsp台&nbsp管&nbsp理系&nbsp统</h1>
+    </div>
+
+    <ul class="nav nav-tabs" style="background:orange;">
+        <li class="tab_item active" style="margin-left:100px;"><a style="background:white;color:orange;" onmouseover="this.style.background='white';this.style.color='orange';" onmouseleave="if(this.parentNode.className == 'tab_item'){this.style.background='orange';this.style.color='white';}" href="index.html">首页</a></li>
+        <li class="tab_item"><a onmouseover="this.style.background='white';this.style.color='orange';" onmouseleave="if(this.parentNode.className == 'tab_item'){this.style.background='orange';this.style.color='white';}" href="room.html" style="color:white">学生宿舍管理</a></li>
+        <li class="tab_item"><a onmouseover="this.style.background='white';this.style.color='orange';" onmouseleave="if(this.parentNode.className == 'tab_item'){this.style.background='orange';this.style.color='white';}" href="student.html" style="color:white">学生信息管理</a></li>
+        <li class="tab_item"><a onmouseover="this.style.background='white';this.style.color='orange';" onmouseleave="if(this.parentNode.className == 'tab_item'){this.style.background='orange';this.style.color='white';}" href="repair.html" style="color:white">宿舍报修信息管理</a></li>
+        <li class="tab_item"><a onmouseover="this.style.background='white';this.style.color='orange';" onmouseleave="if(this.parentNode.className == 'tab_item'){this.style.background='orange';this.style.color='white';}" href="cost.html" style="color:white">水电费管理</a></li>
+        <li class="tab_item"><a onmouseover="this.style.background='white';this.style.color='orange';" onmouseleave="if(this.parentNode.className == 'tab_item'){this.style.background='orange';this.style.color='white';}" href="entry_exit.html" style="color:white">物品出入管理</a></li>
+        <li class="tab_item"><a onmouseover="this.style.background='white';this.style.color='orange';" onmouseleave="if(this.parentNode.className == 'tab_item'){this.style.background='orange';this.style.color='white';}" href="modify_password.html" style="color:white">修改密码</a></li>
+        <div role="presentation" style="float:right;margin:10px 100px 10px 0"><a style="color:white" href="http://127.0.0.1:3000/login.html">注销</a></div>
+        <div role="presentation" style="float:right;margin:10px 20px 10px 0"><a style="color:white" href="javascript:;">欢迎您：<span class="username"></span></a>
+        </div>
+    </ul>
+
+    <div>
+        <img src="../static/img/001.jpg" alt="" style="margin:auto;width:100%;height:100%;z-index:999">
+        <!-- <img src="../static/img/1.jpg" alt="" style="margin:auto;width:100%;height:100%；"> -->
+    </div>
+</body>
+<script type="text/javascript">
+    
+     let storage =window.localStorage;
+                let getusername = storage.getItem('username');
+                $(".username").html(getusername)
+</script>
+</html>

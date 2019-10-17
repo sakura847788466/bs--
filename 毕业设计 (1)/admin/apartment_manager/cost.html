@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>学生宿舍管理系统</title>
+    <link rel="stylesheet" href="../static/css/bootstrap.css">
+    <script src="../static/js/jquery-3.3.1.js"></script>
+    <script src="../static/js/bootstrap.js"></script>
+</head>
+
+<body>
+    <div style="display:flex;align-items: center;">
+        <img src="../static/img/log.png">
+        <h1 style="margin-left:200px;">学&nbsp生&nbsp宿&nbsp舍&nbsp后&nbsp台&nbsp管&nbsp理系&nbsp统</h1>
+    </div>
+
+    <ul class="nav nav-tabs" style="background:orange">
+        <li class="tab_item" style="margin-left:100px;"><a onmouseover="this.style.background='white';this.style.color='orange';" onmouseleave="if(this.parentNode.className == 'tab_item'){this.style.background='orange';this.style.color='white';}" href="index.html" style="color:white">首页</a></li>
+        <li class="tab_item"><a onmouseover="this.style.background='white';this.style.color='orange';" onmouseleave="if(this.parentNode.className == 'tab_item'){this.style.background='orange';this.style.color='white';}" href="room.html" style="color:white">学生宿舍管理</a></li>
+        <li class="tab_item"><a onmouseover="this.style.background='white';this.style.color='orange';" onmouseleave="if(this.parentNode.className == 'tab_item'){this.style.background='orange';this.style.color='white';}" href="student.html" style="color:white">学生信息管理</a></li>
+        <li class="tab_item"><a onmouseover="this.style.background='white';this.style.color='orange';" onmouseleave="if(this.parentNode.className == 'tab_item'){this.style.background='orange';this.style.color='white';}" href="repair.html" style="color:white">宿舍报修信息管理</a></li>
+        <li class="tab_item active"><a style="background:white;color:orange;" onmouseover="this.style.background='white';this.style.color='orange';" onmouseleave="if(this.parentNode.className == 'tab_item'){this.style.background='orange';this.style.color='white';}" href="cost.html"
+                style="color:white">水电费管理</a></li>
+        <li class="tab_item"><a onmouseover="this.style.background='white';this.style.color='orange';" onmouseleave="if(this.parentNode.className == 'tab_item'){this.style.background='orange';this.style.color='white';}" href="entry_exit.html" style="color:white">物品出入管理</a></li>
+        <li class="tab_item"><a onmouseover="this.style.background='white';this.style.color='orange';" onmouseleave="if(this.parentNode.className == 'tab_item'){this.style.background='orange';this.style.color='white';}" href="modify_password.html" style="color:white">修改密码</a></li>
+        <div role="presentation" style="float:right;margin:10px 100px 10px 0"><a style="color:white" href="../user/login.html">注销</a></div>
+        <div role="presentation" style="float:right;margin:10px 20px 10px 0"><a style="color:white" href="javascript:;">欢迎您：<span class="username"></span></a>
+        </div>
+    </ul>
+
+    <div style="margin:auto;width:1000px;height:100%">
+
+        <div style="margin-top:30px">
+            <table class="table table-striped" style="table-layout:fixed;margin:auto;margin-bottom:100px;">
+                <tbody>
+                    <tr class="" style="background:orange;color:white;">
+                        <th class="" colspan="6">水电费&nbsp;
+                            <div class="btn-group">
+                                <button type="button" style="border:1px" class="btn btn-warning dropdown-toggle btn-xs" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            所有信息<span class="caret"></span>
+                        </button>
+
+                                <ul class="dropdown-menu" style="background:#FFFFE0">
+                                    <li><a href="/apartment/cost/0_0_0/">所有信息</a></li>
+                                    <li><a href="/apartment/cost/1_0_0/">水费未缴</a></li>
+                                    <li><a href="/apartment/cost/2_0_0/">电费未缴</a></li>
+                                    <li><a href="/apartment/cost/3_0_0/">水费已缴</a></li>
+                                    <li><a href="/apartment/cost/4_0_0/">电费已缴</a></li>
+                                </ul>
+                            </div>
+                            <div class="btn-group">
+                                <button type="button" style="border:1px" class="btn btn-warning dropdown-toggle btn-xs" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            所有年份<span class="caret"></span>
+                        </button>
+                                <ul class="dropdown-menu" style="background:#FFFFE0">
+                                    <li><a href="/apartment/cost/0_0_0/">所有年份</a></li>
+                                    <li><a href="/apartment/cost/0_2018_0/">2018年</a></li>
+                                    <li><a href="/apartment/cost/0_2017_0/">2017年</a></li>
+                                    <li><a href="/apartment/cost/0_2016_0/">2016年</a></li>
+
+
+                                </ul>
+                            </div>
+                            <div class="btn-group">
+                                <button type="button" style="border:1px" class="btn btn-warning dropdown-toggle btn-xs" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            所有月份<span class="caret"></span>
+                        </button>
+                                <ul class="dropdown-menu" style="background:#FFFFE0">
+                                    <li><a href="/apartment/cost/0_0_0/">所有月份</a></li>
+                                    <li><a href="/apartment/cost/0_0_1/">1月份</a></li>
+                                    <li><a href="/apartment/cost/0_0_2/">2月份</a></li>
+                                    <li><a href="/apartment/cost/0_0_3/">3月份</a></li>
+                                    <li><a href="/apartment/cost/0_0_4/">4月份</a></li>
+                                    <li><a href="/apartment/cost/0_0_5/">5月份</a></li>
+                                    <li><a href="/apartment/cost/0_0_6/">6月份</a></li>
+                                    <li><a href="/apartment/cost/0_0_7/">7月份</a></li>
+                                    <li><a href="/apartment/cost/0_0_8/">8月份</a></li>
+                                    <li><a href="/apartment/cost/0_0_9/">9月份</a></li>
+                                    <li><a href="/apartment/cost/0_0_10/">10月份</a></li>
+                                    <li><a href="/apartment/cost/0_0_11/">11月份</a></li>
+                                    <li><a href="/apartment/cost/0_0_12/">12月份</a></li>
+                                </ul>
+                            </div>
+                        </th>
+
+                        <th style="text-align:center;">
+                            <a href="add_cost.html" style="color:white;">新增水电费</a>
+                        </th>
+                    </tr>
+                    <tr class="" style="text-align:center">
+                        <td class="active">寝室</td>
+                        <td class="active">年月份</td>
+                        <td class="active">水费金额</td>
+                        <td class="active">电费金额</td>
+                        <td class="active">水费缴纳状态</td>
+                        <td class="active">电费缴纳状态</td>
+                        <td class="active">--</td>
+                    </tr>
+
+                </tbody>
+            </table>
+        </div>
+
+    </div>
+</body>
+<script type="text/javascript">
+   getRepair()
+     function getRepair() {
+         let storage =window.localStorage;
+                let getusername = storage.getItem('username');
+                $(".username").html(getusername)
+        let url = "http://127.0.0.1:3000/goods/repair"
+        let data = {
+        }
+       
+        $.post(url, data, function(res) {
+            console.log(res)
+          for (var item of res.data) {
+           var str = `  <tr class="" style="text-align:center">
+                        <td class="active">
+                            <font style="vertical-align: inherit;">
+                                <font style="vertical-align: inherit;">${item.num}</font>
+                            </font>
+                        </td>
+                        <td class="active">
+                            <font style="vertical-align: inherit;">
+                                <font style="vertical-align: inherit;">${item.bedNum}</font>
+                            </font>
+                        </td>
+                        <td class="active">
+                            <font style="vertical-align: inherit;">
+                                <font style="vertical-align: inherit;">${item.name}</font>
+                            </font>
+                        </td>
+                        <td class="active">
+                            <font style="vertical-align: inherit;">
+                                <font style="vertical-align: inherit;">${item.sex}</font>
+                            </font>
+                        </td>
+                        <td class="active">
+                            <font style="vertical-align: inherit;">
+                                <font style="vertical-align: inherit;">${item.banji}</font>
+                            </font>
+                        </td>
+                        <td class="active">
+                            <font style="vertical-align: inherit;">
+                                <font style="vertical-align: inherit;">${item.time}</font>
+                            </font>
+                        </td>
+                        <td class="active">
+                            <font style="vertical-align: inherit;">
+                                <font style="vertical-align: inherit;">${item.stutas}</font>
+                            </font>
+                        </td>
+                    </tr>`;
+            $('tbody').append(str);
+        }
+            
+        })
+    }
+
+
+
+</script>
+
+
+</html>
